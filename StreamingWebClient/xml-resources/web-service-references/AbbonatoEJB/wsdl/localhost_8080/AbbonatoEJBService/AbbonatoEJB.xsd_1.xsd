@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://abbonato/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://abbonato/">
+
+<xs:element name="abbonato" type="tns:abbonato"/>
+
+<xs:element name="aggiornaAbbonato" type="tns:aggiornaAbbonato"/>
+
+<xs:element name="aggiornaAbbonatoResponse" type="tns:aggiornaAbbonatoResponse"/>
+
+<xs:element name="aggiungiAbbonato" type="tns:aggiungiAbbonato"/>
+
+<xs:element name="aggiungiAbbonatoResponse" type="tns:aggiungiAbbonatoResponse"/>
+
+<xs:element name="cercaNonScaduti" type="tns:cercaNonScaduti"/>
+
+<xs:element name="cercaNonScadutiResponse" type="tns:cercaNonScadutiResponse"/>
+
+<xs:element name="cercaPerId" type="tns:cercaPerId"/>
+
+<xs:element name="cercaPerIdResponse" type="tns:cercaPerIdResponse"/>
+
+<xs:element name="cercaTutti" type="tns:cercaTutti"/>
+
+<xs:element name="cercaTuttiResponse" type="tns:cercaTuttiResponse"/>
+
+<xs:element name="cercaValido" type="tns:cercaValido"/>
+
+<xs:element name="cercaValidoNonScadutoPremium" type="tns:cercaValidoNonScadutoPremium"/>
+
+<xs:element name="cercaValidoNonScadutoPremiumResponse" type="tns:cercaValidoNonScadutoPremiumResponse"/>
+
+<xs:element name="cercaValidoResponse" type="tns:cercaValidoResponse"/>
+
+<xs:element name="rimuoviAbbonato" type="tns:rimuoviAbbonato"/>
+
+<xs:element name="rimuoviAbbonatoResponse" type="tns:rimuoviAbbonatoResponse"/>
+
+<xs:complexType name="rimuoviAbbonato">
+<xs:sequence>
+<xs:element name="arg0" type="tns:abbonato" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="abbonato">
+<xs:sequence>
+<xs:element name="cognome" type="xs:string" minOccurs="0"/>
+<xs:element name="data_scadenza" type="tns:localDate" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nome" type="xs:string" minOccurs="0"/>
+<xs:element name="stato" type="xs:string" minOccurs="0"/>
+<xs:element name="tipo_abbonamento" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="localDate" final="extension restriction">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="rimuoviAbbonatoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cercaValidoNonScadutoPremium">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cercaValidoNonScadutoPremiumResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:abbonato" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerId">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaPerIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:abbonato" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaTutti">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cercaTuttiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:abbonato" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaNonScaduti">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cercaNonScadutiResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:abbonato" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cercaValido">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="cercaValidoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:abbonato" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiAbbonato">
+<xs:sequence>
+<xs:element name="arg0" type="tns:abbonato" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiungiAbbonatoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="aggiornaAbbonato">
+<xs:sequence>
+<xs:element name="arg0" type="tns:abbonato" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aggiornaAbbonatoResponse">
+<xs:sequence/>
+</xs:complexType>
+</xs:schema>
